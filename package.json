@@ -9,7 +9,7 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
-    "format:check": "nx format:check"
+    "format:check:ci": "nx format:check --base origin/develop"
   },
   "private": true,
   "dependencies": {
