@@ -1,7 +1,13 @@
 name: Continuous Integration
 on:
+  push:
+    branches:
+      - 'feature/*'
+      - 'develop'
   pull_request:
-    branches: [$default-branch]
+    branches:
+      - 'feature/*'
+      - 'develop'
 
 jobs:
   unit-test:
