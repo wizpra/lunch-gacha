@@ -2,8 +2,8 @@ name: CI
 on:
   pull_request:
     branches:
-      - 'feature/*'
-      - 'release-*'
+      - 'develop'
+      - 'main'
 
 jobs:
   unit-test:
