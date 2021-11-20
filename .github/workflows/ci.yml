@@ -1,9 +1,5 @@
 name: Continuous Integration
 on:
-  push:
-    branches:
-      - 'feature/*'
-      - 'develop'
   pull_request:
     branches:
       - 'feature/*'
@@ -31,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run Lint
+        run: npm run lint
 
       - name: Test
         run: npm run test
