@@ -1,6 +1,6 @@
 import { Restaurant } from './interfaces';
 
-export const restaurants: Restaurant[] = [
+export const RESTAURANT_LIST: Restaurant[] = [
   { name: '赤坂 四川飯店' },
   { name: 'エリックサウス 東京ガーデンテラス店' },
   { name: 'YONA YONA BEER WORKS 赤坂店' },
