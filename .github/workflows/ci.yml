@@ -30,7 +30,10 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Test
+      - name: Lint Styles
+        run: npm run lint-styles
+
+      - name: Unit Test
         run: npm run test
 
       - name: Build
