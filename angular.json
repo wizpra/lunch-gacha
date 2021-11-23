@@ -81,6 +81,12 @@
             ]
           }
         },
+        "lint-styles": {
+          "builder": "@bmatei/stylelint-builder-angular:lint",
+          "options": {
+            "files": ["apps/app/src/**/*.scss"]
+          }
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/app"],
