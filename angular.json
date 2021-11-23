@@ -81,6 +81,12 @@
             ]
           }
         },
+        "lint-styles": {
+          "builder": "@bmatei/stylelint-builder-angular:lint",
+          "options": {
+            "files": ["apps/app/src/**/*.scss"]
+          }
+        },
         "test": {
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/app"],
@@ -88,6 +94,9 @@
             "jestConfig": "apps/app/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       },
       "tags": []
@@ -119,6 +128,29 @@
       },
       "tags": [],
       "implicitDependencies": ["app"]
+    },
+    "data": {
+      "root": "libs/data",
+      "sourceRoot": "libs/data/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/data/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/data"],
+          "options": {
+            "jestConfig": "libs/data/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
