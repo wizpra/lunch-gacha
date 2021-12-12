@@ -82,11 +82,6 @@ export const RESTAURANT_LIST: Restaurant[] = [
     genre: [],
   },
   {
-    name: '蓼科',
-    url: 'https://tabelog.com/tokyo/A1308/A130801/13175336/',
-    genre: [],
-  },
-  {
     name: '慶賓樓',
     url: 'https://tabelog.com/tokyo/A1308/A130801/13020959/',
     genre: [],
@@ -94,16 +89,6 @@ export const RESTAURANT_LIST: Restaurant[] = [
   {
     name: '万ん卯',
     url: 'https://tabelog.com/tokyo/A1308/A130801/13199079/',
-    genre: [],
-  },
-  {
-    name: 'ティークロッシング  エチカフィット永田町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13159596/',
-    genre: [],
-  },
-  {
-    name: '手むすびむすび エチカフィット永田町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13159029/',
     genre: [],
   },
   {
@@ -137,18 +122,8 @@ export const RESTAURANT_LIST: Restaurant[] = [
     genre: [],
   },
   {
-    name: 'カレーショップ C&C  Echika fit 永田町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13158711/',
-    genre: [],
-  },
-  {
     name: '米幸',
     url: 'https://tabelog.com/tokyo/A1308/A130801/13250882/',
-    genre: [],
-  },
-  {
-    name: '八天堂 東京メトロ永田町駅店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13159510/',
     genre: [],
   },
   {
@@ -162,16 +137,6 @@ export const RESTAURANT_LIST: Restaurant[] = [
     genre: [],
   },
   {
-    name: 'ビーエスビー コーヒー ロースターズ',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13199505/',
-    genre: [],
-  },
-  {
-    name: '珈琲果実 JA共済ビル店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13131164/',
-    genre: [],
-  },
-  {
     name: '串の坊 赤坂東急プラザ店',
     url: 'https://tabelog.com/tokyo/A1308/A130801/13013440/',
     genre: [],
@@ -182,48 +147,8 @@ export const RESTAURANT_LIST: Restaurant[] = [
     genre: [],
   },
   {
-    name: 'エクセルシオール カフェ 永田町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13044117/',
-    genre: [],
-  },
-  {
-    name: 'サンマルクカフェ ビックカメラ赤坂見附駅店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13158913/',
-    genre: [],
-  },
-  {
-    name: 'タリーズコーヒー 赤坂東急プラザ店',
-    url: 'https://tabelog.com/tokyo/A1308/A130801/13103685/',
-    genre: [],
-  },
-  {
-    name: 'ティーラウンジ 佳風',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13255029/',
-    genre: [],
-  },
-  {
-    name: 'スターバックスコーヒー 東京ガーデンテラス紀尾井町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130801/13195377/',
-    genre: [],
-  },
-  {
-    name: '喫茶室',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13107692/',
-    genre: [],
-  },
-  {
     name: '永田町オーシャン',
     url: 'https://tabelog.com/tokyo/A1308/A130803/13211917/',
-    genre: [],
-  },
-  {
-    name: 'フレッシュネスバーガー 東京ガーデンテラス紀尾井町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130801/13227644/',
-    genre: [],
-  },
-  {
-    name: '手作り弁当 エフエル',
-    url: 'https://tabelog.com/tokyo/A1308/A130801/13188558/',
     genre: [],
   },
   {
@@ -232,8 +157,13 @@ export const RESTAURANT_LIST: Restaurant[] = [
     genre: [],
   },
   {
-    name: 'Re.Ra.Ku PRO ランニング＆カフェ 永田町店',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13264946/',
+    name: '自由民主党本部食堂',
+    url: 'https://tabelog.com/tokyo/A1308/A130803/13227057/',
+    genre: [],
+  },
+  {
+    name: '参議院第二別館 職員食堂',
+    url: 'https://tabelog.com/tokyo/A1308/A130802/13210245/',
     genre: [],
   },
 ];
