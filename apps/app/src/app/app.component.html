@@ -1,7 +1,21 @@
-<h1>永田町ランチガチャ</h1>
-<button (click)="turnGacha()">ガチャを回す</button>
-<h2 *ngIf="gachaResult !== null">
-  <a href="{{ gachaResult.url }}" target="_blank" rel="noopener">{{
-    gachaResult.name
-  }}</a>
-</h2>
+<mat-card class="content">
+  <header>
+    <div class="logo-wrapper">
+      <img
+        src="assets/images/logo.png"
+        alt="永田町ランチガチャ logo"
+        height="200"
+        width="200"
+      />
+    </div>
+    <h1 class="mat-display-2">LUNCH GACHA</h1>
+  </header>
+  <main>
+    <button (click)="turnGacha()">ガチャを回す</button>
+    <h2 *ngIf="gachaResult !== null">
+      <a href="{{ gachaResult.url }}" target="_blank" rel="noopener">{{
+        gachaResult.name
+      }}</a>
+    </h2>
+  </main>
+</mat-card>
