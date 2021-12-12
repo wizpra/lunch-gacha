@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  proxy: 'https://fusho-cors-anywhere.herokuapp.com/',
 };
 
 /*
