@@ -13,10 +13,33 @@ header {
   text-align: center;
 }
 
+h1.mat-display-2 {
+  margin: unset;
+}
+
 main {
   text-align: center;
 }
 
 .button-wrapper {
   padding: 16px 0;
+}
+
+.result-content {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 200px auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.result-content image-wrapper {
+  display: grid;
+  place-items: center;
+}
+
+.result-content .spinner-wrapper {
+  display: grid;
+  place-items: center;
 }

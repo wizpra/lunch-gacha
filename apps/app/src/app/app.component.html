@@ -17,10 +17,39 @@
         ガチャを回す
       </button>
     </div>
-    <h2 *ngIf="gachaResult !== null">
-      <a href="{{ gachaResult.url }}" target="_blank" rel="noopener">{{
-        gachaResult.name
-      }}</a>
-    </h2>
+
+    <div class="result-area" *ngIf="!isNotGachaYet">
+      <div class="result-content">
+        <div *ngIf="!isLoading; else spinner">
+          <a
+            class="image-wrapper"
+            href="{{ gachaResult?.url }}"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="{{ imageUrl }}"
+              alt="{{ gachaResult?.name }}イメージ"
+              width="200"
+              height="200"
+            />
+          </a>
+        </div>
+
+        <ng-template #spinner>
+          <div class="spinner-wrapper"><mat-spinner></mat-spinner></div>
+        </ng-template>
+
+        <h2 *ngIf="!isLoading; else loadingText">
+          <a href="{{ gachaResult?.url }}" target="_blank" rel="noopener"
+            >{{ gachaResult?.name }}<mat-icon>launch</mat-icon></a
+          >
+        </h2>
+
+        <ng-template #loadingText>
+          <h2>loading...</h2>
+        </ng-template>
+      </div>
+    </div>
   </main>
 </mat-card>
