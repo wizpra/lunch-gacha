@@ -19,6 +19,8 @@ export class AppComponent {
   isNotGachaYet = true;
   isLoading = false;
 
+  buttonText = 'ガチャを回す';
+
   imageRegex = new RegExp(
     /https:\/\/tblg.k-img.com\/restaurant\/images\/.*?\.jpg/
   );
@@ -28,7 +30,7 @@ export class AppComponent {
     const randomNum = Math.floor(Math.random() * this.restaurantList.length);
     this.gachaResult = this.restaurantList[randomNum];
 
-    this.isLoading = true;
+    this.startLoading();
     this.http
       .get(`${environment.proxy}${this.gachaResult.url}`, {
         responseType: 'text',
@@ -42,7 +44,17 @@ export class AppComponent {
         error: (error: any) => {
           console.log(error);
         },
-        complete: () => (this.isLoading = false),
+        complete: () => this.endLoading(),
       });
+  }
+
+  startLoading(): void {
+    this.isLoading = true;
+    this.buttonText = 'ガチャを回しています…';
+  }
+
+  endLoading(): void {
+    this.isLoading = false;
+    this.buttonText = 'もう一度ガチャを回す';
   }
 }
