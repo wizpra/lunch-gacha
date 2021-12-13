@@ -2,19 +2,23 @@
   <header>
     <div class="logo-wrapper">
       <img
-        src="assets/images/logo.png"
+        src="assets/images/logo.svg"
         alt="永田町ランチガチャ logo"
         height="200"
         width="200"
       />
     </div>
-    <h1 class="mat-display-2">LUNCH GACHA</h1>
   </header>
   <main>
     <div class="button-wrapper">
-      <button mat-raised-button color="primary" (click)="turnGacha()">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="turnGacha()"
+        [disabled]="isLoading"
+      >
         <mat-icon>autorenew</mat-icon>
-        ガチャを回す
+        {{ buttonText }}
       </button>
     </div>
 
@@ -40,15 +44,11 @@
           <div class="spinner-wrapper"><mat-spinner></mat-spinner></div>
         </ng-template>
 
-        <h2 *ngIf="!isLoading; else loadingText">
+        <h2 *ngIf="!isLoading">
           <a href="{{ gachaResult?.url }}" target="_blank" rel="noopener"
             >{{ gachaResult?.name }}<mat-icon>launch</mat-icon></a
           >
         </h2>
-
-        <ng-template #loadingText>
-          <h2>loading...</h2>
-        </ng-template>
       </div>
     </div>
   </main>
