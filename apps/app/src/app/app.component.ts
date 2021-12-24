@@ -41,7 +41,7 @@ export class AppComponent {
           if (ogImageElement == null) return;
           this.imageUrl = ogImageElement[0] ?? null;
         },
-        error: (error: any) => {
+        error: (error: unknown) => {
           console.log(error);
         },
         complete: () => this.endLoading(),

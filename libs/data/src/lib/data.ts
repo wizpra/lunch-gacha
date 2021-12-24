@@ -156,14 +156,4 @@ export const RESTAURANT_LIST: Restaurant[] = [
     url: 'https://tabelog.com/tokyo/A1308/A130801/13264822/',
     genre: ['韓国料理', '焼肉', '韓国鍋'],
   },
-  {
-    name: '自由民主党本部食堂',
-    url: 'https://tabelog.com/tokyo/A1308/A130803/13227057/',
-    genre: ['社員食堂', 'カレーライス', '洋食'],
-  },
-  {
-    name: '参議院第二別館 職員食堂',
-    url: 'https://tabelog.com/tokyo/A1308/A130802/13210245/',
-    genre: ['社員食堂'],
-  },
 ];
