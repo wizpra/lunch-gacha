@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Restaurant, RESTAURANT_LIST } from '@lunch-gacha/data';
+import { THEME_LIST } from '@lunch-gacha/data';
 import { environment } from './../environments/environment';
 
 @Component({
@@ -11,41 +11,21 @@ import { environment } from './../environments/environment';
 export class AppComponent {
   constructor(private http: HttpClient) {}
 
-  readonly restaurantList: Restaurant[] = RESTAURANT_LIST;
+  readonly themeList: string[] = THEME_LIST;
 
-  gachaResult: Restaurant | null = null;
-  imageUrl: string | null = null;
+  result: string | null = null;
 
   isNotGachaYet = true;
   isLoading = false;
 
   buttonText = 'ガチャを回す';
 
-  imageRegex = new RegExp(
-    /https:\/\/tblg.k-img.com\/restaurant\/images\/.*?\.jpg/
-  );
-
   turnGacha(): void {
-    if (this.isNotGachaYet) this.isNotGachaYet = false;
-    const randomNum = Math.floor(Math.random() * this.restaurantList.length);
-    this.gachaResult = this.restaurantList[randomNum];
-
     this.startLoading();
-    this.http
-      .get(`${environment.proxy}${this.gachaResult.url}`, {
-        responseType: 'text',
-      })
-      .subscribe({
-        next: (res) => {
-          const ogImageElement = this.imageRegex.exec(res);
-          if (ogImageElement == null) return;
-          this.imageUrl = ogImageElement[0] ?? null;
-        },
-        error: (error: unknown) => {
-          console.log(error);
-        },
-        complete: () => this.endLoading(),
-      });
+    if (this.isNotGachaYet) this.isNotGachaYet = false;
+    const randomNum = Math.floor(Math.random() * this.themeList.length);
+    this.result = this.themeList[randomNum];
+    this.endLoading();
   }
 
   startLoading(): void {
