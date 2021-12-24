@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: '16'
           cache: npm
+      - run: npm ci
       - uses: mansagroup/nrwl-nx-action@v2
         with:
           target: test, lint, lint-styles, build
