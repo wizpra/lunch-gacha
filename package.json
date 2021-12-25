@@ -12,7 +12,7 @@
     "lint": "nx lint",
     "lint-styles": "nx lint-styles",
     "format:check": "nx format:check",
-    "deploy": "nx run app:deploy --baseHref=lunch-gacha --cname=undefined"
+    "deploy": "nx run app:deploy --baseHref=talk-theme-gacha --cname=undefined"
   },
   "private": true,
   "dependencies": {
