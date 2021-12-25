@@ -1,15 +1,27 @@
+<header>
+  <div class="logo-wrapper">
+    <img
+      src="assets/images/logo.svg"
+      alt="永田町ランチガチャ logo"
+      height="200"
+      width="200"
+    />
+  </div>
+</header>
+
 <mat-card class="content">
-  <header>
-    <div class="logo-wrapper">
-      <img
-        src="assets/images/logo.svg"
-        alt="永田町ランチガチャ logo"
-        height="200"
-        width="200"
-      />
-    </div>
-  </header>
   <main>
+    <div class="result-area" *ngIf="!isNotGachaYet">
+      <div class="result-content">
+        <div *ngIf="!isLoading; else spinner">
+          <h2>{{ result }}</h2>
+        </div>
+        <ng-template #spinner>
+          <div class="spinner-wrapper"><mat-spinner></mat-spinner></div>
+        </ng-template>
+      </div>
+    </div>
+
     <div class="button-wrapper">
       <button
         mat-raised-button
@@ -20,17 +32,6 @@
         <mat-icon>autorenew</mat-icon>
         {{ buttonText }}
       </button>
-    </div>
-
-    <div class="result-area" *ngIf="!isNotGachaYet">
-      <div class="result-content">
-        <div *ngIf="!isLoading; else spinner">
-          <h2>{{ result }}</h2>
-        </div>
-        <ng-template #spinner>
-          <div class="spinner-wrapper"><mat-spinner></mat-spinner></div>
-        </ng-template>
-      </div>
     </div>
   </main>
 </mat-card>
